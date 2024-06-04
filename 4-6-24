@@ -1,0 +1,136 @@
+Reverse.palindrome using recursion
+
+def reverse(x,re):
+    if(x==0):
+        return 0
+    re=re*10+(x%10)
+    return fun(x//10,re)
+n=int(input())
+if(n==fun(n,0)):
+    print("palindrome")
+else:
+    print("not palindrome")
+--------------------------------------------------------------------------------------------------------------------
+Print no. of steps back in a word
+
+ip=input()
+n=int(input())
+c=n%26
+d=''
+for i in ip:
+    if((ord(i)-c)>=97):
+        d=d+chr(ord(i)-c)
+    else:
+        d=d+chr(ord(i)-c+26)
+print(d)
+
+---------------------------------------------------------------------------------------------------------------------
+buy and sell product for profit
+
+prices=list(map(int,input().split()))
+maxp=0
+buy=prices[0]
+for i in prices:
+    if i<buy:
+        buy=i
+    elif (i-buy)>maxp:
+        maxp=i-buy
+print(maxp)
+--------------------------------------------------------------------------------------------------
+Check given string from matrix
+n=int(input())
+m=[]
+for i in range(n):
+    m.append(list(input()))
+s=input()
+f=0
+for i in range(len(s)):
+    if(s[i] in m[i%n]):
+        print("No")
+        f=1
+        break
+    else:
+        m[i].remove(s[i])
+        print(m)
+if(f==0):
+    print("Yes")
+    
+'''
+n=int(input())
+m=[]
+f=0
+for i in range(n):
+    m.append(list(input()))
+s=input()
+for i in range(len(s)):
+    if(s[i] in m[i%n]):
+        m[i].remove(s[i])
+        print(m)
+        continue
+    else:
+        f=1
+        break
+if(f==1):
+    print("no")
+else:
+    print("yes")
+'''
+------------------------------------------------------------------------------------------
+Count the sequence of alphabets
+
+string=input()
+count=1
+m=0
+for i in range(len(string)-1):
+    if (ord(string[i])==ord(string[i+1])-1):
+        count+=1
+    else:
+        if(count>m):
+            m=count
+        count=1
+if(count>m):
+    m=count
+print(m)
+
+
+--------------------------------------------------------------------------------------------------------
+Pattern starbox and numbers
+
+def print_pattern():
+    for i in range(5):
+        for j in range(5):
+            if i == 0 or i == 4 or j == 0 or j == 4:
+                print("*", end=" ")
+            elif i == 1:
+                print(j, end=" ")
+            elif i == 2:
+                print(j + 3, end=" ")
+            elif i == 3:
+                print(j + 6, end=" ")
+        print()
+
+# Call the function to print the pattern
+print_pattern()
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
