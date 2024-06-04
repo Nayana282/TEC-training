@@ -1,0 +1,163 @@
+Arrange the words in ascending Order
+
+def words(s):
+    a = s.split()
+    b = [0] * len(a)
+    for i in a:
+        b[int(i[-1]) - 1] = i[0:-1]
+    return " ".join(b)
+s="is2 sentence4 This1 a3"
+print(words(s))
+
+-------------------------------------------------------------------------------------------------------------
+Add even,odd from list-recursion
+
+ef fun(i,s1,s2):
+    if(i==len(a)):
+        return s1,s2
+    if(a[i]%2==0):
+        s1=s1+a[i]
+    if(b[i]%2!=0):
+        s2=s2+b[i]
+    return fun(i+1,s1,s2)
+'''def add_a(a):
+    s=0
+    for i in a:
+        if i%2==0:
+            s=s+i
+    print (s)
+def add_b(b):
+    s=0
+    for i in b:
+        if i%2!=0:
+            s=s+i
+    print (s)
+'''
+a=[3,8,5,4,3]
+b=[5,0,9,3,2]
+print(fun(0,0,0))
+
+---------------------------------------------------------------------------------------------------
+Evensum-oddsum-recursion
+
+#even
+def even(n):
+    if n==0:
+        return 0
+    else:
+        return n+even(n-2)
+n=10
+print(even(n))
+'''
+odd
+def odd(n):
+    if n==0:
+        return 0
+    else:
+        return n+even(n-1)
+n=10
+print(odd(n))
+'''
+------------------------------------------------------------------------------------------------------------------------
+Add digits in num if is prime printor print next
+
+def sum_digits(n):
+    s = 0
+    while n:
+        s += n % 10
+        n //= 10
+    return s
+def pnp(x):
+    if(x in [2,3,5,7]):
+        return m
+    
+    else:
+        return m+1
+n=int(input())
+m=n
+if(n<10):
+    print(pnp(n))
+else:
+    while(1):
+        n=sum_digits(n)
+        print(n)
+        if n<10:
+            break
+    print(pnp(n))
+    
+-------------------------------------------------------------------------------------------------------------
+Count no of female,male
+
+
+ip="MMFFFFMFMFMFMFFFMMFMFMFMMFM"
+a=ip.count('M')
+b=ip.count('F')
+#print(a)
+#print(b)
+if a==b:
+    print("0")
+elif(a<b):
+    print("F")
+else:
+    print("M")
+----------------------------------------------------------------------------------------------------------------------
+check two lists are= or not
+word1=["a","bc"]
+word2=["ab","c"]
+
+result = "".join(word1)
+result1="".join(word2)
+print(result)
+print(result1)
+if result==result1:
+    print("True")
+else:
+    print("False")
+---------------------------------------------------------------------------------------------------------------------
+Remove star and before char
+
+s="leet**cod*e"
+st=[]
+for i in s:
+    if (i!="*"):
+        st.append(i)
+    else:
+        st.pop()
+print("".join(st))
+    
+
+--------------------------------------------------------------------------------------------
+Lenoflist-even-odd
+
+a=[5,8,9,5,2,4,7]
+b=len(a)
+if b%2==0:
+    print("yes")
+else:
+    print("no")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
